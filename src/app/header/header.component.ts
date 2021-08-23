@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
 
   onToggle = () => {
     this.toggle = !this.toggle;
-    console.log(this.toggle);
   };
   constructor() {}
 
