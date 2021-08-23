@@ -1,0 +1,134 @@
+@import "../../styles/variables.scss";
+
+:host {
+  height: 160px;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.btn-login {
+  margin-left: auto;
+}
+
+#nav-visible {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.separator-mobile {
+  height: 0;
+}
+
+.navbar {
+  grid-row: 1;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+
+  &.actions {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-brand {
+  line-height: 0;
+  margin-right: 45px;
+}
+
+.toggle-nav {
+  display: none;
+  line-height: 0;
+  cursor: pointer;
+
+  &.icon-menu {
+    fill: $gray;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 14px;
+
+  a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: $grayish-violet;
+
+    &:active {
+      color: $dark-violet;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  :host {
+    height: 90px;
+  }
+
+  .toggle-nav {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    right: 15px;
+    background-color: $dark-violet;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 40px;
+    border-radius: 9px;
+
+    & a {
+      padding: 15px 0;
+      margin-right: 0;
+      font-size: 18px;
+      color: white;
+
+      &:active {
+        color: $gray;
+      }
+    }
+  }
+
+  .btn {
+    align-self: stretch;
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+  }
+
+  .btn-login {
+    margin-left: 0;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 15px;
+
+    &:active {
+      color: $gray;
+    }
+  }
+
+  .separator-mobile {
+    background: $gray;
+    height: 1px;
+    align-self: stretch;
+    margin: 20px 0 30px;
+  }
+
+  .toggle-switch {
+    display: none;
+  }
+}

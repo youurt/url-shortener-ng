@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/normalize.scss";
+@import "./styles/layout.scss";
+@import "./styles/theme.scss";
+@import "./styles/variables.scss";
+
+.btn {
+  font-family: $font-family-sans-serif;
+  border-radius: 30px;
+  padding: 18px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.btn-small {
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 25px;
+}
+
+.btn-primary {
+  background-color: $cyan;
+  color: white;
+
+  &:active {
+    background-color: hsla(180, 66%, 49%, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.btn-secondary {
+  background-color: white;
+  color: $grayish-violet;
+
+  &:active {
+    color: $dark-violet;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
